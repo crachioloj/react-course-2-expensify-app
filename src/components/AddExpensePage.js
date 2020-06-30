@@ -6,8 +6,8 @@ import { addExpense } from "../actions/expenses"
 // whyyyyyyohwhy convert to class????
 export class AddExpensePage extends React.Component {
   onSubmit = (expense) => {
-    props.addExpense(expense);
-    props.history.push("/");
+    this.props.addExpense(expense);
+    this.props.history.push("/");
   };
   render() {
     return (

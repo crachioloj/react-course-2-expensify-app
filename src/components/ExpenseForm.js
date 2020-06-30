@@ -3,7 +3,6 @@ import moment from "moment";
 import { SingleDatePicker } from "react-dates";
 
 const now = moment();
-// console.log(now.format("MM Do, YYYY"))
 
 export default class ExpenseForm extends React.Component {
   constructor(props) {
@@ -48,7 +47,6 @@ export default class ExpenseForm extends React.Component {
     } else {
       this.setState(() => ({error: ""}));
       this.props.onSubmit({
-        id: props.expense ? props.expense.id : "",
         description: this.state.description,
         amount: parseFloat(this.state.amount, 10) * 100,
         createdAt: this.state.createdAt.valueOf(),
