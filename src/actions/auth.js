@@ -1,5 +1,10 @@
 import { firebase, googleAuthProvider } from "../firebase/firebase";
 
+export const login = (uid) => ({
+  type: "LOGIN",
+  uid
+});
+
 export const startLogin = () => {
   // console.log("attempt startLogin");
   return () => {
@@ -12,6 +17,10 @@ export const startLogin = () => {
       });
   };
 };
+
+export const logout = () => ({
+  type: "LOGOUT"
+})
 
 export const startLogout = () => {
   // console.log("attempt startLogout");
