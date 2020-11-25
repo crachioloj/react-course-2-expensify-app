@@ -15,3 +15,5 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(undefined, mapDispatchToProps)(LoginPage);
+
+// export default LoginPage;

@@ -1,6 +1,5 @@
 import * as firebase from "firebase";
 
-
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -16,6 +15,10 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+googleAuthProvider.setCustomParameters({
+  "prompt": "select_account",
+});
 
 export { firebase, googleAuthProvider, database as default };
 
