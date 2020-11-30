@@ -10,10 +10,10 @@ exports[`should render login page correctly 1`] = `
     <h1
       className="layout__title"
     >
-      Expensify App
+      Boilerplate
     </h1>
     <p>
-      It's time to get your expenses under control!
+      Tagline for app
     </p>
     <button
       onClick={[Function]}
